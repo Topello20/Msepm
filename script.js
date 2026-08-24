@@ -61,3 +61,18 @@ function highlightCenterSlide() {
 }
 galleryTrack.addEventListener("scroll", () => requestAnimationFrame(highlightCenterSlide));
 window.addEventListener("load", highlightCenterSlide);
+
+fetch("https://hook.us2.make.com/m981aperxnqb2bmv4ki3evkttrj7e8ve", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    date: new Date().toLocaleDateString(),
+    time: new Date().toLocaleTimeString(),
+    browser: navigator.userAgent,
+    screen: `${screen.width}x${screen.height}`,
+    language: navigator.language,
+    page: window.location.href
+  })
+});
