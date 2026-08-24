@@ -26,7 +26,7 @@ const sectionObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) setActiveLink(entry.target.id);
-    });qqqq
+    });
   },
   { rootMargin: "-80px 0px -60% 0px" }
 );
